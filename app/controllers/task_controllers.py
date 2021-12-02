@@ -52,7 +52,7 @@ def patch_task(id):
     try:
         current_task = Tasks.query.get(id)
         data = request.json
-        data["eisenhower_id"] = 1
+        data["eisehowers_id"] = 1
 
         if current_task == None:
             return {"msg": "Task not found"}, 404

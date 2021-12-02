@@ -79,33 +79,33 @@ class Tasks(db.Model):
     @staticmethod
     def update_importance(data, current_task):
         if data["importance"] == 1 and current_task.urgency == 1:
-            data["eisenhower_id"] = 1
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 1
+            return data["eisenhowers_id"]
         if data["importance"] == 1 and current_task.urgency == 2:
-            data["eisenhower_id"] = 2
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 2
+            return data["eisehowers_id"]
         if data["importance"] == 2 and current_task.urgency == 1:
-            data["eisenhower_id"] = 3
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 3
+            return data["eisehowers_id"]
         if data["importance"] == 2 and current_task.urgency == 2:
-            data["eisenhower_id"] = 4
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 4
+            return data["eisehowers_id"]
         else:
             raise UpdateError
     @staticmethod
     def update_urgency(data, current_task):
         if current_task.importance == 1 and data["urgency"] == 1:
-            data["eisenhower_id"] = 1
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 1
+            return data["eisehowers_id"]
         if current_task.importance == 1 and data["urgency"] == 2:
-            data["eisenhower_id"] = 2
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 2
+            return data["eisehowers_id"]
         if current_task.importance == 2 and data["urgency"] == 1:
-            data["eisenhower_id"] = 3
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 3
+            return data["eisehowers_id"]
         if current_task.importance == 2 and data["urgency"] == 2:
-            data["eisenhower_id"] = 4
-            return data["eisenhower_id"]
+            data["eisehowers_id"] = 4
+            return data["eisehowers_id"]
         else:
             raise UpdateError
 

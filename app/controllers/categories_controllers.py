@@ -14,7 +14,7 @@ def create_category():
         current_app.db.session.add(category)
         current_app.db.session.commit()
 
-        return jsonify(category)
+        return jsonify(category), 201
     except psycopg2.errors.UniqueViolation:
         return {'msg': 'Category already exists!'}, 409
 
